@@ -1,0 +1,158 @@
+Attribute VB_Name = "BDMProject_Global_Definitions"
+
+Public Const RELEASE = "Release: 3/10/2000"
+Public Const version = "2.62 for Windows 95, 98, and NT"
+Public Const SPROGRAMNAME = "Personal Directory Manager"
+Public Const nNumericVersion = 2.62
+' Registry Information
+Public Const AppNameSetting = "Personal Directory Manager"
+
+'----------------------------------------------------------------------------
+'User Defined Types
+'----------------------------------------------------------------------------
+
+Type FolderType                   ' BDM 2.0 Data Type
+       Company As String * 40
+         AName As String * 30
+       Address As String * 40
+          City As String * 15
+         State As String * 2
+      Zip_Code As String * 10
+    Home_Phone As String * 13
+     Bus_Phone As String * 20
+         Pager As String * 13
+           Fax As String * 13
+        E_Mail As String * 100
+       WebPage As String * 100
+         Notes As String * 100
+       Bookmark As Integer
+End Type
+
+Type FormState
+    Deleted As Integer
+    Dirty As Integer
+    color As Integer
+    filepath As String
+End Type
+
+Type SearchType
+    SearchMode As Integer
+    CaseSens As Integer
+    searchText As String
+End Type
+
+Type QuickListType
+   Description As String
+   File As String
+End Type
+
+
+Type PrefsType
+    ShowISPButton As Integer
+    ShowStateButton As Integer
+    FillData As Integer
+End Type
+
+
+Global QuickList(20) As QuickListType
+Global QuickLinkEdit As QuickListType
+
+'----------------------------------------------------------------------------
+'Global Declarations, Personal Directory Manager 2.0
+'----------------------------------------------------------------------------
+
+Global Const PD_Size = 498
+Global Const TemplateSize = 24
+Global Const LEFT_DOWN = 1
+Global Const RIGHT_DOWN = 2
+
+Global Const PDM97_Size = 257
+Global Const PDM20_Size = 324
+
+Global Const BDM_Size = 498
+Global SelectedFile As String
+
+Global Pd As FolderType
+Global Prefrences As PrefsType
+Global DataToFill As FolderType
+Global SearchData As SearchType
+
+Global Si As String               'Search Informatio.  Also used to pass other information
+Global SFont As String            'Name of selected font
+Global RName As String
+Global RCO As String
+Global PDM_F As String
+Global OpenFolderName As String
+Global CurrentCaption As String
+Global SelectedState As String
+
+Public dpath As String
+Public LastFileType As Integer
+Global sBinderFileName As String
+
+Global UserField(0 To 12) As String     ' User Definable Fields Array
+Global BMIndex(2 To 100) As Integer
+Global SRIndex(2 To 100) As Integer
+Global SelectedItems() As Integer
+Global PrintBuffer() As Integer         ' Print Buffer Array
+
+
+Global TemplateNumber As Integer
+Global CurrentIndex As Integer          'Keeps track of the current record number
+Global SearchMode As Integer
+Global txt As Integer
+Global FreeNum As Integer
+Global NoteBook As Integer
+Global StartNewForm As Integer
+Global FolderReadOnly As Integer
+
+'Global SetAsDefault As Integer
+Global Canceled As Integer
+Global ConvertAddress As Integer
+
+
+' Window State Flags
+Global ViewWindowOpen As Integer
+Global SearchResultsOpen As Integer
+Public BookmarksOpen As Integer
+Public FolderOpen As Integer
+Global RecyclingBinOpen As Integer
+Public PrintBufferOpen As Integer
+Global QuickListEditorOpen As Integer
+
+' Option Flags
+Global DragDrop As Integer
+
+' Dialog Confirmations
+Public nDialogButton As Integer     ' Button that was clicked
+Public Const CANCELBUTTON = 0
+Public Const DELETEBUTTON = 1
+Public Const WASTEBUTTON = 2
+'----------------------------------------------------------------------------
+'Global Declarations, Notebook
+'----------------------------------------------------------------------------
+
+Global Const modal = 1
+Global Const CASCADE = 0
+Global Const TILE_HORIZONTAL = 1
+Global Const TILE_VERTICAL = 2
+Global Const ARRANGE_ICONS = 3
+
+Global FState()  As FormState
+Global Document() As New frmNotePad
+Global gFindString, gFindCase As Integer, gFindDirection As Integer
+Global gCurPos As Integer, gFirstTime As Integer
+Global ArrayNum As Integer
+Global CurrentDocument As Integer, CurrentFolderTemplate As Integer
+
+'----------------------------------------------------------------------------
+'Api Calls
+'----------------------------------------------------------------------------
+Global Const WM_USER = &H400
+Global Const EM_UNDO = WM_USER + 23
+
+Public Declare Function SendMessage Lib "user32" Alias "SendMessageA" (ByVal hwnd As Long, ByVal wMsg As Long, ByVal wParam As Long, lParam As Any) As Long
+Public Declare Function GetFocus Lib "user32" () As Long
+Public Declare Function PutFocus Lib "user32" Alias "SetFocus" (ByVal hwnd As Long) As Long
+
+

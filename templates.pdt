@@ -1,0 +1,92 @@
+' Personal Directory Manager Template File
+' Copyright 1998-1999 Rietta Software.  All Rights Reserved.
+
+[INDEX]
+NumberOfTemplates=6
+1=Normal
+2=Business Contacts
+3=Personal Address Book
+4=School Student Directory
+5=Family Directory
+6=Web Pages
+
+[Normal]
+Field1=Company
+Field2=Name
+Field3=Address
+Field4=City
+Field5=State
+Field6=Zip
+Field7=Home Phone
+Field8=Bus. Phone
+Field9=Pager
+Field10=Fax
+Field11=E-Mail
+Field12=Web Page
+Field13=Notes
+
+[Business Contacts]
+Field1=Company
+Field2=Name
+Field3=Address
+Field4=City
+Field5=State
+Field6=Zip
+Field7=Home Phone
+Field8=Bus. Phone
+Field9=Pager
+Field10=Fax
+Field11=E-Mail
+Field12=Web Page
+Field13=Notes
+
+[Personal Address Book]
+Field1=Last Name
+Field2=First Name
+Field3=Address
+Field4=City
+Field5=State
+Field6=Zip
+Field7=Home Phone
+Field8=Bus. Phone
+Field9=Pager
+Field10=Fax
+Field11=E-Mail
+Field12=Web Page
+Field13=Notes
+
+[School Student Directory]
+Field1=Student
+Field2=Parents
+Field3=Address
+Field4=City
+Field5=State
+Field6=Zip
+Field7=Home Phone
+Field8=Bus. Phone
+Field9=Pager
+Field10=Fax
+Field11=E-Mail
+Field12=Web Page
+Field13=Notes
+
+[Family Directory]
+Field1=Relative
+Field2=Name
+Field3=Address
+Field4=City
+Field5=State
+Field6=Zip
+Field7=Home Phone
+Field8=Bus. Phone
+Field9=Pager
+Field10=Fax
+Field11=E-Mail
+Field12=Web Page
+Field13=Notes
+
+[Web Pages]
+Field1=Description
+Field11=E-Mail
+Field12=Web Page
+Field13=Notes

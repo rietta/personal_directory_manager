@@ -1,0 +1,8 @@
+Key Areas where Development are Needed
+
+* Printing capabilities
+* Conversions with other database platforms
+* Syncing Capabilities with Outlook and other contact managers
+* Syncing with PDA devices
+
+Date: 1/5/2001
